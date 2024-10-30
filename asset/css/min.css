@@ -1,0 +1,372 @@
+@font-face {
+    font-family: 'DIN';
+    src: url("/wp-content/themes/easymix-concrete/fonts/din/regular/DINComp.eot");
+    src: url("/wp-content/themes/easymix-concrete/fonts/din/regular/DINComp.eot?#iefix") format("eot"), url("/wp-content/themes/easymix-concrete/fonts/din/regular/DINComp.woff") format("woff"), url("/wp-content/themes/easymix-concrete/fonts/din/regular/DINComp.ttf") format("truetype");
+    font-weight: normal;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'DIN Bold';
+    src: url("/wp-content/themes/easymix-concrete/fonts/din/bold/DINComp-Bold.eot");
+    src: url("/wp-content/themes/easymix-concrete/fonts/din/bold/DINComp-Bold.eot?#iefix") format("eot"), url("/wp-content/themes/easymix-concrete/fonts/din/bold/DINComp-Bold.woff") format("woff"), url("/wp-content/themes/easymix-concrete/fonts/din/bold/DINComp-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url("/wp-content/themes/easymix-concrete/fonts/source/source-sans-pro-v11-latin-regular.woff2") format("woff2"), url("/wp-content/themes/easymix-concrete/fonts/source/source-sans-pro-v11-latin-regular.woff") format("woff")
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("/wp-content/themes/easymix-concrete/fonts/source/source-sans-pro-v11-latin-700.woff2") format("woff2"), url("/wp-content/themes/easymix-concrete/fonts/source/source-sans-pro-v11-latin-700.woff") format("woff")
+}
+
+
+#calculatorContainer {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    background: #fff
+}
+
+.page-parent #calculatorContainer {
+    display: none
+}
+
+#calculatorContainer .text {
+    width: 100%;
+    margin-bottom: 2em
+}
+
+@media (min-width:1600px) {
+    #calculatorContainer .text {
+        width: 55%
+    }
+}
+
+#calculatorContainer .text:before {
+    content: "";
+    background: url("../images/calculator-icon.png") left no-repeat;
+    background-size: 50px;
+    float: left;
+    width: 50px;
+    height: 65px;
+    margin: 0.2em 1em 2em 0
+}
+
+#calculatorContainer h2 {
+    font: 2.8rem/1.2em "DIN Bold", sans-serif;
+    color: #f36c21
+}
+
+#calculatorContainer p {
+    color: #929292;
+    font-size: 1.8rem
+}
+
+@media (min-width:1200px) {
+    #calculatorContainer {
+        padding: 20px
+    }
+    #calculatorContainer .left,
+    #calculatorContainer .right {
+        float: left;
+        width: 49%
+    }
+    #calculatorContainer .right {
+        float: right;
+        margin: 0
+    }
+}
+
+@media (min-width:1600px) {
+    #calculatorContainer {
+        padding: 40px 20px 20px
+    }
+}
+
+#calculatorContainer form {
+    width: 100%
+}
+
+#calculatorContainer form .calculator-results {
+    display: block;
+    clear: both
+}
+
+@media (min-width:800px) {
+    #calculatorContainer form .calculator-results {
+        float: left;
+        width: 100%;
+        margin-top: 0.5em
+    }
+}
+
+@media (min-width:800px) {
+    #calculatorContainer form .calculator-results a.btn {
+        margin-left: 1em;
+        display: inline;
+        position: relative;
+        top: -5px
+    }
+}
+
+#calculatorContainer form .calculator-results a.btn:hover {
+    background: #2c2c2c
+}
+
+#calculatorContainer form .calculator-results p {
+    font: 1.5em/1.3em 'DIN', sans-serif
+}
+
+#calculatorContainer form .calculator-results p span {
+    font: 1.4em/1.3em 'DIN Bold', sans-serif;
+    color: #f36c21;
+    clear: none;
+    display: inline
+}
+
+#calculatorContainer form td.tdinput {
+    width: 100%
+}
+
+#calculatorContainer form fieldset {
+    padding: 0;
+    border: 0
+}
+
+#calculatorContainer form input,
+#calculatorContainer form select {
+    float: left;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    height: 50px;
+    margin: 0 0 20px
+}
+
+#calculatorContainer form input,
+#calculatorContainer form select {
+    border: 1px solid #ececec;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #2c2c2c;
+    border-radius: 0;
+    font-size: 2rem
+}
+
+#calculatorContainer form input {
+    padding: 10px;
+    width: 60%;
+    border-right: 0
+}
+
+#calculatorContainer form input.calc-button,
+#calculatorContainer form input.reset {
+    color: #fff;
+    width: 49%;
+    float: left;
+    font-size: 2rem;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s
+}
+
+#calculatorContainer form input.calc-button {
+    float: right;
+    background: #f36c21;
+    text-transform: none;
+    border: 0
+}
+
+#calculatorContainer form input.calc-button:hover {
+    background: #fee553;
+    color: #f36c21;
+    border-color: #fee553
+}
+
+#calculatorContainer form input.reset {
+    float: left;
+    background: #2c2c2c;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    border: 0
+}
+
+#calculatorContainer form input.reset:hover {
+    background: black
+}
+
+@media (min-width:800px) {
+    #calculatorContainer form input.reset {
+        width: 30%
+    }
+    #calculatorContainer form input.calc-button {
+        width: 70%
+    }
+}
+
+#calculatorContainer form select {
+    width: 40%;
+    padding: .5em;
+    float: right;
+    background: url("../images/dropdown.png") 90% center no-repeat
+}
+
+#calculatorContainer form span {
+    display: block;
+    clear: both
+}
+
+#calculatorContainer img {
+    float: right;
+    margin-top: 1em
+}
+
+@media (min-width:800px) {
+    #calculatorContainer form.muck-away-calculator .calculator-results {
+        text-align: center
+    }
+    #calculatorContainer form.muck-away-calculator .calculator-results a.btn {
+        display: block;
+        top: 10px;
+        padding: 5px
+    }
+}
+
+@media (min-width:1200px) {
+    #calculatorContainer.calculator--muck .text {
+        margin-bottom: 50px
+    }
+}
+
+@media (min-width:1600px) {
+    #calculatorContainer.calculator--muck .text {
+        margin-bottom: 30px
+    }
+}
+
+.news-calculator #calculatorContainer form .calculator-results {
+    text-align: center
+}
+
+.news-calculator #calculatorContainer form .calculator-results a.btn {
+    display: block;
+    top: 0;
+    padding: 5px 40px;
+    margin-top: 10px
+}
+
+.news-calculator #calculatorContainer fieldset {
+    clear: both
+}
+
+.news-calculator #calculatorContainer .right {
+    margin: 0
+}
+
+@media (min-width:1200px) {
+    .news-calculator #calculatorContainer .left,
+    .news-calculator #calculatorContainer .right {
+        width: 100%
+    }
+}
+
+@media (min-width:1600px) {
+    .news-calculator #calculatorContainer .text {
+        width: 100%
+    }
+}
+
+.postcode-yes p span.calculator {
+    color: #646464;
+    font-size: 2.0rem;
+    display: block;
+    font-family: "DIN", sans-serif
+}
+
+.postcode-yes #calculatorContainer {
+    text-align: left
+}
+
+.postcode-yes #calculatorContainer p {
+    padding: 0;
+    background: #fff;
+    font-family: "Source Sans Pro", sans-serif
+}
+
+.postcode-yes #calculatorContainer .calculator {
+    float: left;
+    width: 100%
+}
+
+.postcode-yes #calculatorContainer .text {
+    display: none
+}
+
+@media (min-width:1200px) {
+    .postcode-yes #calculatorContainer .calculator-results {
+        margin-top: 30px;
+        text-align: center
+    }
+}
+
+.postcode-yes #calculatorContainer form p {
+    background: #fff
+}
+
+.postcode-yes #calculatorContainer form #answer {
+    text-transform: none
+}
+
+body.concrete-calculator .hero {
+    background: #f36c21;
+    background-image: none;
+    margin-bottom: 40px
+}
+
+body.concrete-calculator .hero:after,
+body.concrete-calculator .hero:before {
+    display: none
+}
+
+@media (min-width:800px) {
+    body.concrete-calculator .hero {
+        margin-bottom: 0
+    }
+}
+
+@media (min-width:1200px) {
+    body.concrete-calculator .hero {
+        padding: 45px 20px 35px
+    }
+}
+
+body.concrete-calculator .copy .usp {
+    display: none!important
+}
+
+body.concrete-calculator .postcode-internal {
+    display: none
+}
+
+@media (min-width:1200px) {
+    body.concrete-calculator .right-side {
+        margin-top: -50px;
+        -webkit-box-shadow: 0 -6px 40px rgba(44, 44, 44, 0.2);
+        box-shadow: 0 -6px 40px rgba(44, 44, 44, 0.2)
+    }
+}
